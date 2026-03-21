@@ -373,8 +373,42 @@ async function startBot(sessionId, authPath, envConfig) {
       }
       if (!sentConnectMsg.has(sessionId)) {
         sentConnectMsg.add(sessionId);
-        const upMsg = `Hasiya MD Connected\nSession: ${sessionId}\nPrefix: ${prefix}`;
-        await conn.sendMessage(ownerNumber[0] + "@s.whatsapp.net", { text: upMsg });
+        const now = new Date().toLocaleString('en-US', {
+    timeZone: 'Asia/Colombo',
+    hour: '2-digit', minute: '2-digit',
+    day: '2-digit', month: 'short', year: 'numeric'
+});
+
+const upMsg = `╔▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄╗
+▌  ⚡ *𝗛𝗔𝗦𝗜𝗬𝗔 𝗠𝗗 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗* ⚡  ▐
+╚▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀╝
+┃
+┃  🤖 *Bot*      ➠ HASIYA MD
+┃  🧩 *Prefix*   ➠ [ ${prefix} ]
+┃  💎 *Version*  ➠ V1 
+┃  ⚡ *Status*   ➠ Bot Connected ✅
+┃  🕐 *Time*     ➠ ${now}
+┃
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━⊷
+> ✨ *HASIYA TECH · MOVIE EDITION*`;
+
+await conn.sendMessage(
+    ownerNumber[0] + "@s.whatsapp.net",
+    {
+        image: { url: "https://files.catbox.moe/2epiuz.jpg" },
+        caption: upMsg,
+        contextInfo: {
+            forwardingScore: 999,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363421386030144@newsletter',
+                newsletterName: "👑 HASIYA MD",
+                serverMessageId: 143
+            }
+        }
+    },
+    { quoted: chama }
+);
         try { await conn.newsletterFollow(`0029Vb7Cx5gJENxwXCJaXk2I@newsletter`); } catch (e) {}
       }
     }
