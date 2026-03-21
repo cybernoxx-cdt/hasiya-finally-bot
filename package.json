@@ -33,6 +33,7 @@
     "file-type": "latest",
     "file_size_url": "latest",
     "google-tts-api": "latest",
+    "node-gtts": "latest",
     "wa-sticker-formatter": "latest",
     "ffmpeg-static": "latest",
     "form-data": "latest",
