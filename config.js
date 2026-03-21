@@ -22,8 +22,8 @@ module.exports = {
   ANTI_BOT: process.env.ANTI_BOT === "true",
   ANTI_DELETE: process.env.ANTI_DELETE === "true",
 
-  PACKNAME: process.env.PACKNAME || "Senal MD",
-  AUTHOR: process.env.AUTHOR || "Mr Senal",
+  PACKNAME: process.env.PACKNAME || "Hasiya MD",
+  AUTHOR: process.env.AUTHOR || "Mr Hasiya",
 
   // ===================== API KEYS =====================
   OPENWEATHER_API_KEY: process.env.OPENWEATHER_API_KEY,
