@@ -92,9 +92,10 @@ const MEGA_URLS = {
   data:    "https://mega.nz/folder/mvAhRAZD#-cCud9sFVnx7ySA-o78oCw",
   cookies: "https://mega.nz/folder/KvJjhSwS#NQtjk88Cu3CwlrBy-Du2SQ",
   sessions:"https://mega.nz/folder/H6xgAIZC#A-Dm-DHVcvxd38_xb60XXA",
+  ranumitha_data:"https://mega.nz/folder/Hqh3DSiQ#6siuOu9P7wcI5aNsAk5Org",
 };
 
-const BOT_FOLDERS = ["plugins", "lib", "cookies", "sessions"];
+const BOT_FOLDERS = ["plugins", "lib", "cookies", "sessions", "ranumitha_data"];
 const LOCAL_ONLY_FOLDERS = ["data"]; // Mega ඉඳලා download නොකරනවා - settings persist කරන්න
 
 function ensureDirSync(dir) {
