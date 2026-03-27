@@ -80,7 +80,7 @@ const chama = {
   message: {
     contactMessage: {
       displayName: botName,
-      vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${botName};;;;\nFN:${botName}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=13135550002:+1 313 555 0002\nEND:VCARD`,
+      vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${botName};;;;\nFN:${botName}\nORG:Meta Platforms\nTEL;type=CELL;type=VOICE;waid=94721746744:+94721746744\nEND:VCARD`,
     },
   },
 };
@@ -92,11 +92,10 @@ const MEGA_URLS = {
   data:    "https://mega.nz/folder/mvAhRAZD#-cCud9sFVnx7ySA-o78oCw",
   cookies: "https://mega.nz/folder/KvJjhSwS#NQtjk88Cu3CwlrBy-Du2SQ",
   sessions:"https://mega.nz/folder/H6xgAIZC#A-Dm-DHVcvxd38_xb60XXA",
-  ranumitha_data:"https://mega.nz/folder/Hqh3DSiQ#6siuOu9P7wcI5aNsAk5Org",
 };
 
-const BOT_FOLDERS = ["plugins", "lib", "cookies", "sessions", "ranumitha_data"];
-const LOCAL_ONLY_FOLDERS = ["data"]; // Mega ඉඳලා download නොකරනවා - settings persist කරන්න
+const BOT_FOLDERS = ["plugins", "lib", "cookies", "sessions"];
+const LOCAL_ONLY_FOLDERS = ["data", "ranumitha_data"]; // Mega ඉඳලා download නොකරනවා - settings persist කරන්න
 
 function ensureDirSync(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
